@@ -1,4 +1,8 @@
 node {
+    tools {
+        jdk 'JDK18'
+    }
+    
     // Mark the code checkout 'stage'....
     stage('Checkout') {
      checkout scm
