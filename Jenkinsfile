@@ -14,9 +14,4 @@ node {
       sh "mvn clean verify -Dmaven.test.failure.ignore=true"
     }
 
-    stage('Analysis') {
-      withSonarQubeEnv('SonarQube') {
-        sh "mvn sonar:sonar -Dsonar.branch=${env.BRANCH_NAME}"
-      }
-    }
 }
