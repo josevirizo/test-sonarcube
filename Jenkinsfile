@@ -16,7 +16,7 @@ node {
 
     stage('Analysis SonarQube') {
       withSonarQubeEnv('SonarQube') {
-        sh "mvn sonar:sonar"
+        sh "mvn sonar:sonar -Dsonar.login=jyanez -Dsonar.password=_Jisote82"
       }
     }
 }
